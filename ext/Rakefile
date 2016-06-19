@@ -1,0 +1,6 @@
+require 'ffi-compiler/compile_task'
+
+FFI::Compiler::CompileTask.new("minhash") do |c|
+  c.add_include_path(File.expand_path("."))
+  c.have_library('z')
+end
